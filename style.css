@@ -1,0 +1,109 @@
+/* 
+
+orange: #FF6A00
+component background: #1D2530
+paragraph text: #949FAE
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  background-color: #131418;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-component {
+  background: #1d2530;
+  border-radius: 30px;
+  width: 415px;
+  height: 415px;
+}
+
+.star-img {
+  background: #232d39;
+  display: inline-block;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  margin: 2rem;
+  position: relative;
+}
+
+.star-img img {
+  position: absolute;
+  top: 32%;
+  left: 32%;
+}
+
+.component-content {
+  margin: 0rem 0rem 0rem 2rem;
+}
+
+.rating-heading {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.rating-paragraph {
+  font-size: 15px;
+  color: #949fae;
+  width: 90%;
+  margin-bottom: 1.3rem;
+}
+
+.rating-numbers {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rating-number {
+  color: #949fae;
+  background: #232d39;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 1.3rem 0rem 0rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.rating-number:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+
+input[type="submit"] {
+  font-size: 15px;
+  font-weight: 700;
+  background: #fc7614;
+  color: white;
+  border: none;
+  border-radius: 22.5px;
+  width: 341px;
+  height: 45px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  color: #fc7614;
+  background: white;
+}
