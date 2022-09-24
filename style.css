@@ -1,11 +1,11 @@
 /* 
 
-orange: #FF6A00
-component background: #1D2530
-paragraph text: #949FAE
+
+
+Global Settings
+
 
 */
-
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +22,32 @@ body {
   justify-content: center;
 }
 
+/* 
+
+
+
+
+
+Rating Component
+
+
+
+
+
+*/
+
+.rating-component {
+  background: #1d2530;
+  border-radius: 30px;
+  width: 415px;
+  height: 415px;
+  display: none;
+}
+
+.component-content {
+  margin: 0rem 2rem 0rem 2rem;
+}
+
 .star-img {
   background: #232d39;
   display: inline-block;
@@ -34,17 +60,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.rating-component {
-  background: #1d2530;
-  border-radius: 30px;
-  width: 415px;
-  height: 415px;
-}
-
-.component-content {
-  margin: 0rem 2rem 0rem 2rem;
 }
 
 .rating-heading {
@@ -111,6 +126,59 @@ input[type="submit"]:hover {
 
 
 
+Thank You Component
+
+
+
+
+
+*/
+
+.thankyou-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #1d2530;
+  border-radius: 30px;
+  width: 415px;
+  height: 415px;
+}
+
+.thankyou-img {
+  margin-bottom: 1rem;
+}
+
+#dynamic-text {
+  padding: 0.5rem 1.5rem;
+  background: #232d39;
+  color: #fc7614;
+  border-radius: 30px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.thankyou-heading {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.thankyou-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: #949fae;
+  text-align: center;
+  padding: 0rem 2.5rem;
+}
+
+/* 
+
+
+
+
+
 
 MEDIA QUERY
 
@@ -160,5 +228,10 @@ MOBILE PORTRAIT
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
+  }
+
+  .thankyou-component {
+    width: 90%;
+    height: 415px;
   }
 }
