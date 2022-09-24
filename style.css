@@ -22,13 +22,6 @@ body {
   justify-content: center;
 }
 
-.rating-component {
-  background: #1d2530;
-  border-radius: 30px;
-  width: 415px;
-  height: 415px;
-}
-
 .star-img {
   background: #232d39;
   display: inline-block;
@@ -36,18 +29,22 @@ body {
   width: 48px;
   height: 48px;
   text-align: center;
-  margin: 2rem;
+  margin: 2rem 2rem 1rem 2rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.star-img img {
-  position: absolute;
-  top: 32%;
-  left: 32%;
+.rating-component {
+  background: #1d2530;
+  border-radius: 30px;
+  width: 415px;
+  height: 415px;
 }
 
 .component-content {
-  margin: 0rem 0rem 0rem 2rem;
+  margin: 0rem 2rem 0rem 2rem;
 }
 
 .rating-heading {
@@ -106,4 +103,62 @@ input[type="submit"] {
 input[type="submit"]:hover {
   color: #fc7614;
   background: white;
+}
+
+/* 
+
+
+
+
+
+
+MEDIA QUERY
+
+
+
+
+
+
+*/
+
+/* 
+
+
+MOBILE PORTRAIT
+
+
+*/
+
+@media only screen and (max-width: 600px) {
+  .rating-component {
+    width: 95%;
+    height: 415px;
+  }
+
+  .rating-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rating-number {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .submit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input[type="submit"] {
+    width: 90%;
+    height: 40px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
 }
