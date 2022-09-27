@@ -22,6 +22,10 @@ body {
   justify-content: center;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* 
 
 
@@ -41,7 +45,6 @@ Rating Component
   border-radius: 30px;
   width: 415px;
   height: 415px;
-  display: none;
 }
 
 .component-content {
@@ -82,7 +85,7 @@ Rating Component
   margin-bottom: 1rem;
 }
 
-.rating-number {
+.rating-number button {
   color: #949fae;
   background: #232d39;
   width: 51px;
@@ -94,10 +97,11 @@ Rating Component
   margin: 0rem 1.3rem 0rem 0rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  border: none;
 }
 
-.rating-number:hover {
-  background: #ff6a00;
+.rating-number:hover button {
+  background: #979797;
   color: #fff;
 }
 
@@ -143,6 +147,7 @@ Thank You Component
   border-radius: 30px;
   width: 415px;
   height: 415px;
+  display: none;
 }
 
 .thankyou-img {
