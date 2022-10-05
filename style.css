@@ -83,6 +83,8 @@ Rating Component
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border: none;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .rating-number:hover button {
