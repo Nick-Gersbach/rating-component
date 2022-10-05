@@ -178,7 +178,8 @@ MOBILE PORTRAIT
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+    margin-top: 1rem;
+  .5}
 
   .rating-number {
     width: 42px;
@@ -198,7 +199,8 @@ MOBILE PORTRAIT
     margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
+    margin-top: 2rem;
   }
 
   .thankyou-component {
