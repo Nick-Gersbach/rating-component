@@ -33,7 +33,7 @@ Rating Component
 }
 
 .component-content {
-  margin: 0rem 2rem 0rem 2rem;
+  margin: 2rem 2.5rem 1rem 2rem;
 }
 
 .star-img {
@@ -43,11 +43,11 @@ Rating Component
   width: 48px;
   height: 48px;
   text-align: center;
-  margin: 2rem 2rem 1rem 2rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.3rem;
 }
 
 .rating-heading {
@@ -168,10 +168,22 @@ MEDIA QUERY
 MOBILE PORTRAIT
 */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: #131418;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   .rating-component {
     width: 95%;
     height: 415px;
+    margin-top: 3rem;
+  }
+
+  .component-content {
+    margin: 2rem 2rem 0rem 2rem;
   }
 
   .rating-numbers {
@@ -179,7 +191,7 @@ MOBILE PORTRAIT
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem;
-  .5}
+  }
 
   .rating-number {
     width: 42px;
