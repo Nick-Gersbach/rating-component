@@ -1,32 +1,29 @@
-const ratingForm = document.querySelector(".rating-container");
-const thankYouCard = document.querySelector(".thankyou-component");
+const submitBtn = document.getElementById("submit-btn");
+const ratingComponent = document.querySelector(".rating-component");
+const thankYouCompoenent = document.querySelector(".thankyou-component");
+const ratingBtns = document.querySelectorAll(".btn");
+let ratingScore = document.querySelector(".dynamic-number");
+let defaultScore = 3;
 
-const submitBtn = document
-  .getElementById("submit-btn")
-  .addEventListener("click", function (e) {
-    //Prevent Form From Submitting
-    e.preventDefault();
+submitBtn.addEventListener("click", submitScore);
+ratingBtns.forEach((btn) => {
+  btn.addEventListener("click", ratingBtnClick);
+});
 
-    //Input Variables
-    const rating1 = document.getElementById("rating-1");
-    const rating2 = document.getElementById("rating-2");
-    const rating3 = document.getElementById("rating-3");
-    const rating4 = document.getElementById("rating-4");
-    const rating5 = document.getElementById("rating-5");
-    const dynamicNumber = document.getElementById("dynamic-number");
+function submitScore(e) {
+  e.preventDefault();
+  ratingComponent.style.display = "none";
+  ratingScore.textContent = defaultScore;
+  thankYouCompoenent.style.display = "flex";
+}
 
-    if (rating1.checked === true) {
-      dynamicNumber.innerHTML = rating1.value;
-    } else if (rating2.checked === true) {
-      dynamicNumber.innerHTML = rating2.value;
-    } else if (rating3.checked === true) {
-      dynamicNumber.innerHTML = rating3.value;
-    } else if (rating4.checked === true) {
-      dynamicNumber.innerHTML = rating4.value;
-    } else if (rating5.checked === true) {
-      dynamicNumber.innerHTML = rating5.value;
-    }
+function ratingBtnClick(e) {
+  //Add orange BG Background class
+  if (e.target.classList.contains("btn")) {
+    e.target.classList.add("active");
+  } else {
+    e.target.parentElement.classList.add("active");
+  }
 
-    ratingForm.style.display = "none";
-    thankYouCard.style.display = "flex";
-  });
+  defaultScore = e.target.textContent;
+}

@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,44 +15,50 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Rating Component</title>
+    <title>How Did We Do?</title>
   </head>
   <body>
-    <section class="rating-container">
-      <div class="rating-img">
-        <img src="./img/icon-star.svg" alt="star-img" />
+    <div class="rating-component">
+      <div class="star-img">
+        <img src="./img/icon-star.svg" alt="star" />
       </div>
-      <div class="rating-text">
-        <h1>How did we do?</h1>
-        <p>
+      <div class="component-content">
+        <h2 class="rating-heading">How did we do?</h2>
+        <p class="rating-paragraph">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
+        <form>
+          <ul class="rating-numbers">
+            <li class="rating-number">
+              <button id="1-rating" type="button" class="btn">1</button>
+            </li>
+            <li class="rating-number">
+              <button id="2-rating" type="button" class="btn">2</button>
+            </li>
+            <li class="rating-number">
+              <button id="3-rating" type="button" class="btn">3</button>
+            </li>
+            <li class="rating-number">
+              <button id="4-rating" type="button" class="btn">4</button>
+            </li>
+            <li class="rating-number">
+              <button id="5-rating" type="button" class="btn">5</button>
+            </li>
+          </ul>
+          <div class="submit-container">
+            <input id="submit-btn" type="submit" value="Submit" />
+          </div>
+        </form>
       </div>
-
-      <form>
-        <div class="radio-container">
-          <input type="radio" id="rating-1" name="form-rating" value="1" />
-          <label for="rating-1">1</label>
-          <input type="radio" id="rating-2" name="form-rating" value="2" />
-          <label for="rating-2">2</label>
-          <input type="radio" id="rating-3" name="form-rating" value="3" />
-          <label for="rating-3">3</label>
-          <input type="radio" id="rating-4" name="form-rating" value="4" />
-          <label for="rating-4">4</label>
-          <input type="radio" id="rating-5" name="form-rating" value="5" />
-          <label for="rating-5">5</label>
-        </div>
-        <button id="submit-btn">Submit</button>
-      </form>
-    </section>
+    </div>
 
     <div class="thankyou-component">
       <div class="thankyou-img">
         <img src="./img/illustration-thank-you.svg" alt="thank you" />
       </div>
-      <p class="dynamic-text">
-        You selected <span id="dynamic-number"></span> out of 5
+      <p id="dynamic-text">
+        You selected <span class="dynamic-number"></span> out of 5
       </p>
       <h2 class="thankyou-heading">Thank you!</h2>
       <p class="thankyou-text">
