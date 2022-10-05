@@ -1,11 +1,18 @@
 /* 
 
+Colors
 
 
-Global Settings
+body background: #131518
+orange: #FF6D00
+title: #FFF
+input background: #242E39
+number color: #7A869A
+text color: #8C97A6
 
 
 */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,124 +29,157 @@ body {
   justify-content: center;
 }
 
-li {
-  list-style-type: none;
-}
-
-/* 
-
-
-
-
-
-Rating Component
-
-
-
-
-
-*/
-
-.rating-component {
-  background: #1d2530;
+.rating-container {
+  display: block;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
   border-radius: 30px;
   width: 415px;
   height: 415px;
 }
 
-.component-content {
-  margin: 0rem 2rem 0rem 2rem;
-}
-
-.star-img {
-  background: #232d39;
-  display: inline-block;
+.rating-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #242e39;
   border-radius: 50%;
-  width: 48px;
   height: 48px;
-  text-align: center;
-  margin: 2rem 2rem 1rem 2rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 48px;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
-.rating-heading {
-  color: white;
+.rating-text {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 1.5rem;
+}
+
+.rating-text h1 {
+  color: #fff;
   font-size: 28px;
-  margin-bottom: 1rem;
-  font-weight: 700;
 }
 
-.rating-paragraph {
+.rating-text p {
   font-size: 15px;
-  color: #949fae;
-  width: 90%;
-  margin-bottom: 1.3rem;
+  color: #969fad;
+  margin-top: 12px;
 }
 
-.rating-numbers {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+form {
+  margin: 1.3rem 0rem;
 }
 
-.rating-number button {
-  color: #949fae;
-  background: #232d39;
-  width: 51px;
-  height: 51px;
-  border-radius: 50%;
+.radio-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0rem 1.3rem 0rem 0rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  border: none;
+  position: relative;
 }
 
-.rating-number:hover button {
-  background: #979797;
+input[type="radio"] {
+  margin: 0 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="radio"]:after {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: -2px;
+  left: -18px;
+  position: relative;
+  background-color: #262e38;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type="radio"]:checked:after {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: -3px;
+  left: -17px;
+  position: relative;
+  background-color: #fc7614;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+}
+
+label {
+  color: #fff;
+  z-index: 2;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+label:hover {
   color: #fff;
 }
 
-input[type="submit"] {
+label[for="rating-1"] {
+  position: absolute;
+  top: 13px;
+  left: 51px;
+}
+label[for="rating-2"] {
+  position: absolute;
+  top: 13px;
+  left: 126px;
+}
+label[for="rating-3"] {
+  position: absolute;
+  top: 13px;
+  left: 202px;
+}
+
+label[for="rating-4"] {
+  position: absolute;
+  top: 13px;
+  left: 279px;
+}
+
+label[for="rating-5"] {
+  position: absolute;
+  top: 13px;
+  left: 357px;
+}
+
+button {
+  display: block;
   font-size: 15px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
   background: #fc7614;
   color: white;
-  border: none;
-  border-radius: 22.5px;
-  width: 341px;
+  margin: 4.3rem auto;
+  width: 340px;
   height: 45px;
-  margin-top: 0.5rem;
+  border-radius: 22px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-input[type="submit"]:hover {
+button:hover {
+  background: #fff;
   color: #fc7614;
-  background: white;
 }
 
 /* 
-
-
-
-
-
 Thank You Component
-
-
-
-
-
 */
 
 .thankyou-component {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -147,14 +187,13 @@ Thank You Component
   border-radius: 30px;
   width: 415px;
   height: 415px;
-  display: none;
 }
 
 .thankyou-img {
   margin-bottom: 1rem;
 }
 
-#dynamic-text {
+.dynamic-text {
   padding: 0.5rem 1.5rem;
   background: #232d39;
   color: #fc7614;
@@ -176,67 +215,4 @@ Thank You Component
   color: #949fae;
   text-align: center;
   padding: 0rem 2.5rem;
-}
-
-/* 
-
-
-
-
-
-
-MEDIA QUERY
-
-
-
-
-
-
-*/
-
-/* 
-
-
-MOBILE PORTRAIT
-
-
-*/
-
-@media only screen and (max-width: 600px) {
-  .rating-component {
-    width: 95%;
-    height: 415px;
-  }
-
-  .rating-numbers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .rating-number {
-    width: 42px;
-    height: 42px;
-    font-size: 14px;
-  }
-
-  .submit-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  input[type="submit"] {
-    width: 90%;
-    height: 40px;
-    margin-top: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
-  }
-
-  .thankyou-component {
-    width: 90%;
-    height: 415px;
-  }
 }
