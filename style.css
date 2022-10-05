@@ -67,7 +67,7 @@ Rating Component
 .rating-numbers {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-top: 2.3rem;
 }
 
 .rating-number button {
@@ -106,7 +106,7 @@ input[type="submit"] {
   border-radius: 22.5px;
   width: 341px;
   height: 45px;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
